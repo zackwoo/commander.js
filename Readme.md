@@ -1,6 +1,8 @@
 Commander.js
 ============
 
+__Important:__ 3.0 is under active development and as such this branch is considered seriously unstable. Use at your own peril. If you're interested in contributing ideas or code to 3.0 please see `CONTRIBUTORS.md`.
+
 The complete solution for [node.js](http://nodejs.org) command-line interfaces, inspired by Ruby's [commander](https://github.com/visionmedia/commander).
 
 [![Build Status](https://api.travis-ci.org/visionmedia/commander.js.svg)](http://travis-ci.org/visionmedia/commander.js)
