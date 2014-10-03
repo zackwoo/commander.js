@@ -1,18 +1,23 @@
-# Commander.js
+Commander.js
+============
 
-  The complete solution for [node.js](http://nodejs.org) command-line interfaces, inspired by Ruby's [commander](https://github.com/visionmedia/commander).
+The complete solution for [node.js](http://nodejs.org) command-line interfaces, inspired by Ruby's [commander](https://github.com/visionmedia/commander).
 
  [![Build Status](https://api.travis-ci.org/visionmedia/commander.js.svg)](http://travis-ci.org/visionmedia/commander.js)
 
-## Installation
+Installation
+------------
+```shell
+$ npm install commander
+```
 
-    $ npm install commander
+Option parsing
+--------------
 
-## Option parsing
+Options with commander are defined with the `.option()` method, also serving as documentation for the options. The example below parses args and options from `process.argv`, leaving remaining args as the `program.args` array which were not consumed by options.
 
- Options with commander are defined with the `.option()` method, also serving as documentation for the options. The example below parses args and options from `process.argv`, leaving remaining args as the `program.args` array which were not consumed by options.
-
-```js
+```javascript
+// Path to node executable on unix, comment out on Windows environments.
 #!/usr/bin/env node
 
 /**
@@ -36,31 +41,33 @@ if (program.bbq) console.log('  - bbq');
 console.log('  - %s cheese', program.cheese);
 ```
 
- Short flags may be passed as a single arg, for example `-abc` is equivalent to `-a -b -c`. Multi-word options such as "--template-engine" are camel-cased, becoming `program.templateEngine` etc.
+Short flags may be passed as a single arg, for example `-abc` is equivalent to `-a -b -c`. Multi-word options such as "--template-engine" are camel-cased, becoming `program.templateEngine` etc.
 
-## Automated --help
+Automated --help
+----------------
 
- The help information is auto-generated based on the information commander already knows about your program, so the following `--help` info is for free:
+The help information is auto-generated based on the information commander already knows about your program, so the following `--help` info is for free:
 
-```  
- $ ./examples/pizza --help
+```
+$ ./examples/pizza --help
 
-   Usage: pizza [options]
+ Usage: pizza [options]
 
-   Options:
+Options:
 
-     -V, --version        output the version number
-     -p, --peppers        Add peppers
-     -P, --pineapple      Add pineapple
-     -b, --bbq            Add bbq sauce
-     -c, --cheese <type>  Add the specified type of cheese [marble]
-     -h, --help           output usage information
+ -V, --version        output the version number
+ -p, --peppers        Add peppers
+ -P, --pineapple      Add pineapple
+ -b, --bbq            Add bbq sauce
+ -c, --cheese <type>  Add the specified type of cheese [marble]
+ -h, --help           output usage information
 
 ```
 
-## Coercion
+Type Coercion
+-------------
 
-```js
+```javascript
 function range(val) {
   return val.split('..').map(Number);
 }
@@ -101,16 +108,12 @@ console.log(' verbosity: %j', program.verbose);
 console.log(' args: %j', program.args);
 ```
 
-## Custom help
+Custom help
+-----------
 
- You can display arbitrary `-h, --help` information
- by listening for "--help". Commander will automatically
- exit once you are done so that the remainder of your program
- does not execute causing undesired behaviours, for example
- in the following executable "stuff" will not output when
- `--help` is used.
+You can display arbitrary `-h, --help` information by listening for "--help". Commander will automatically exit once you are done so that the remainder of your program does not execute causing undesired behaviors, for example in the following executable "stuff" will not output when `--help` is used.
 
-```js
+```javascript
 #!/usr/bin/env node
 
 /**
@@ -166,15 +169,17 @@ Examples:
 
 ```
 
-## .outputHelp()
+.outputHelp()
+-------------
 
-  Output help information without exiting.
+Output help information without exiting.
 
-## .help()
+.help()
 
-  Output help information and exit immediately.
+Output help information and exit immediately.
 
-## Links
+Links
+-----
 
  - [API documentation](http://visionmedia.github.com/commander.js/)
  - [ascii tables](https://github.com/LearnBoost/cli-table)
@@ -182,7 +187,8 @@ Examples:
  - [more progress bars](https://github.com/substack/node-multimeter)
  - [examples](https://github.com/visionmedia/commander.js/tree/master/examples)
 
-## License 
+License
+-------
 
 (The MIT License)
 
