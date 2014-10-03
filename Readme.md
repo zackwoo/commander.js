@@ -3,7 +3,7 @@ Commander.js
 
 The complete solution for [node.js](http://nodejs.org) command-line interfaces, inspired by Ruby's [commander](https://github.com/visionmedia/commander).
 
- [![Build Status](https://api.travis-ci.org/visionmedia/commander.js.svg)](http://travis-ci.org/visionmedia/commander.js)
+[![Build Status](https://api.travis-ci.org/visionmedia/commander.js.svg)](http://travis-ci.org/visionmedia/commander.js)
 
 Installation
 ------------
