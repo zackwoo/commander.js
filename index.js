@@ -147,7 +147,7 @@ Command.prototype.__proto__ = EventEmitter.prototype;
  *        });
  *
  *      program.parse(process.argv);
-  *
+ *
  * @param {String} name
  * @param {String} [desc] for git-style sub-commands
  * @return {Command} the new command
